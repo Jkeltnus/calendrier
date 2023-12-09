@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #040718 0%, #000106 100%);
+}
+
+h1 {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 40px;
+  line-height: 95.2%;
+  width: 9ch;
+  color: #b3906e;
+  text-shadow: 0 2px 2px rgb(255, 255, 255);
+  margin-bottom: 3.9rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 75px;
+  }
+}
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 64%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 21px;
+  border: 3px solid #13253f;
+  background: center / cover url('./assets/images/city.png') no-repeat;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 3rem;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}
+.card-date {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 35px;
+  height: 70px;
+  width: 70px;
+  border-radius: 21px;
+  border: 3px solid #2f6991;
+  border-bottom: 3px solid #2f6a91d6;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 7, 24, 0.75) 0%,
+    rgba(246, 193, 137, 0.75) 100%
+  );
+  color: #b3906e;
+  box-shadow: 0 8px 8px #000000a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 2px 2px rgb(255, 255, 255);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.card-date:hover {
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  .card-date {
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-date {
+    font-size: 75px;
+    height: 134px;
+    width: 134px;
+  }
+}
+
+.card-fee-wrapper {
+  position: absolute;
+  width: 80%;
+  height: 78%;
+  top: 1.5rem;
+  background: center / cover url('./assets/images/fee.png') no-repeat;
+  border-radius: 21px;
+  box-shadow: 0 8px 8px #000000a0;
+  border: 3px solid #d1decebe;
+  opacity: 0;
+  display: none;
+}
+
+.card-fee-wrapper.show {
+  display: block;
+  animation: slideDown 1.6s ease-out forwards;
+}
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(3rem);
+  }
+}
+
+.fee-msg {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20%;
+  background-color: #040718ae;
+  border-radius: 12px;
+  border: 2px solid #7f7f7fba;
+  animation: showMsg 0.9s 1.9s ease-out forwards;
+  opacity: 0;
+  font-family: lato, sans-serif, Arial;
+
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  color: antiquewhite;
+}
+
+@keyframes showMsg {
+  to {
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgba(82, 5, 5, 0.644);
+  border-radius: 50%;
+  border: 1px solid #aeaeae84;
+}
+.change-msg {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgba(34, 243, 114, 0.644);
+  border-radius: 50%;
+  border: 1px solid #aeaeae84;
+}
+.star {
+  position: absolute;
+  z-index: -2;
+  filter: drop-shadow(0 -15px 3px rgba(244, 176, 2, 0.089));
+}
+
+.star-sm {
+  width: 50px;
+  height: auto;
+}
+.star-md {
+  width: 75px;
+  height: auto;
+}
+.star-lg {
+  width: 100px;
+  height: auto;
+}
+
+.star-1,
+.star-3 {
+  top: 5%;
+}
+.star-2,
+.star-4 {
+  top: 20%;
+}
+
+.star-1 {
+  left: 15%;
+}
+.star-2 {
+  left: 30%;
+}
+.star-3 {
+  right: 30%;
+}
+.star-4 {
+  right: 15%;
+}
+
+.star-5,
+.star-7 {
+  bottom: 8%;
+}
+.star-6 {
+  bottom: 3%;
+  left: 50%;
+}
+.star-5 {
+  left: 30%;
+}
+.star-7 {
+  right: 30%;
+}
